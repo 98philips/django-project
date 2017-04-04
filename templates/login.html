@@ -1,0 +1,26 @@
+<html>
+<HEAD><TITLE>login</TITLE></HEAD>
+<body background="jocker.jpg" leftmargin="900">
+<div align="right">New user? <A Href="signup"><INPUT type="button" value="Sign up"></A></div>
+</TR><br><br><br><br><br><br><br><br><br><br>
+<center>
+<form method="POST">
+{% csrf_token %}
+{%if message is not None%}
+<script language="JavaScript">alert("{{message}}");</script>
+{%endif%}
+<TABLE>
+<TR>
+<TD><INPUT type="text" placeholder="Username" name="usertxt"><br></TD>
+</TR>
+<TR>
+<TD><INPUT type="password" placeholder="Password" name="userpass"></TD>
+</TR>
+<TR>
+<TD align="right"><INPUT type="submit" value="Login"><A Href="signup.html"></TD>
+</TR>
+</TABLE>
+</form>
+</center>
+</body>
+</html>

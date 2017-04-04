@@ -1,0 +1,28 @@
+<html>
+<HEAD><TITLE>signup</TITLE></HEAD>
+<body background="jocker.jpg" leftmargin="900">
+<br><br><br><br><br><br><br><br><br><br><br>
+<center>
+<form method="POST">
+ {% csrf_token %} 
+ {%if message is not None%}
+<script language="JavaScript">alert("{{message}}");</script>
+{%endif%}
+<TABLE>
+<TR>
+<TD><INPUT type="text" placeholder="Username" name="usertxt"></TD>
+</TR>
+<TR>
+<TD><INPUT type="password" placeholder="Password" name="userpass1"></TD>
+</TR>
+<TR>
+<TD><INPUT type="password" placeholder="Confirm Password" name="userpass2"></TD>
+</TR>
+<TR>
+<TD colspan="2" align="center"><INPUT type="submit" value="Sign in"><INPUT type="reset" value="Reset"></TD>
+</TR>
+</TABLE>
+</form>
+</center>
+</body>
+</html>

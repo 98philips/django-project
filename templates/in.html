@@ -1,0 +1,26 @@
+<html>
+<HEAD><TITLE>welcome</TITLE></HEAD>
+<body>
+
+<br><br><br><br><br><br><br><br><br><br>
+<center>
+<form method="POST">
+{% csrf_token %}
+
+<form action="" method="POST" role="form">
+    <legend></legend>
+
+    <div class="form-group">
+        <label for="">Item</label>
+        <input type="text" class="form-control" name="itemtxt" id="" placeholder="Enter list item">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{%for i in todo%}
+{{i}}<BR>
+{%endfor%} 
+
+</center>
+</body>
+</html>
